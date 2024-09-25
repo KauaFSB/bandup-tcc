@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.header-img {
+    height: 100vh;
+    width: 100%;
+    background-color: blue;
+}
+
+.fundo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 319vh;
+    background-color: aqua;
+}
+
+.container {
+    width: 90%;
+    height: 255vh;
+    background-color: wheat;
+}
+
+.primeiro-bloco {
+    width: 100%;
+    height: 105vh;
+    background-color: brown;
+}
+
+.foto {
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 60%;
+}
+
+.bloco-intro {
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.intro {
+    width: 50%;
+    height: 90%;
+    background-color: azure;
+}
+
+.card-dog {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 90%;
+    background-color: blueviolet;
+    border-radius: 70px 0 0 70px;
+    padding: 1rem;
+}
+
+.card-dog img {
+    width: 18vh;
+    height: 18vh;
+}
+
+.bloco-conteudo {
+    width: 100%;
+    height: 70vh;
+    background-color: darkgreen;
+    padding-top: 2rem;
+}
+
+.titulo-principal h1 {
+    font-size: 4.7rem;
+}
+
+.fundo-txt1 {
+    width: 64%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.fundo-txt2 {
+    width: 105%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.fundo-txt3 {
+    width: 84%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
+.fundo-txt4 {
+    width: 37%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-direita {
+    width: 50%;
+    height: 60%;
+    background-color: darkred;
+    text-align: right;
+}
+
+.principal {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.visita {
+    width: 100%;
+    height: 30rem;
+    background-color: darksalmon;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.texto {
+    width: 50%;
+}
+
+.imagem {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.imagem img {
+    width: 80%;
+    height: auto;
+}
+
+.titulo-comum {
+    padding-bottom: 1rem;
+}
+
+p {
+    font-size: 30px;
+}
+
+.texto p {
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1500px) {
+    p {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1375px) {
+    .titulo-principal h1 {
+        font-size: 3.7rem;
+    }
+
+}
+
+@media (max-width: 1240px) {
+    .foto{
+       height: 70%;
+    }
+}
+
+@media (max-width: 1155px) {
+    .foto img {
+        height: 20rem;
+        width: auto;
+    }
+
+    .visita {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imagem {
+        justify-content: center;
+    }
+
+    .imagem img {
+        width: 80%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 1090px) {
+    .titulo-principal h1 {
+        font-size: 3.0rem;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width: 880px) {
+    .titulo-principal h1 {
+        font-size: 2.5rem;
+    }
+
+    .foto img {
+        height: 18rem;
+        width: auto;
+    }
+}
+
+@media (max-width: 730px) {
+    .foto {
+        height: 50%;
+    }
+
+    .foto img {
+        height: 16rem;
+        width: auto;
+    }
+    
+    .titulo-principal  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }   
+
+    .titulo-principal h1{
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    .principal {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .texto-direita {
+        text-align: center;
+        width: 90%;
+        margin-top: 1rem;
+        height: 40%;
+    }
+
+    .primeiro-bloco {
+        height: 95vh;
+    }
+
+    .bloco-conteudo {
+        height: 100vh;
+    }
+    
+}
+
+@media (max-width: 590px) {
+    .foto img {
+        height: 14rem;
+        width: auto;
+    }
+
+    .titulo-principal h1 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
+
+
+
