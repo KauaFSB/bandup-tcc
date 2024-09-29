@@ -84,6 +84,10 @@ img {
     font-size: 4.7rem;
 }
 
+.titulo-principal {
+    background-color: dimgrey;
+}
+
 .fundo-txt1 {
     width: 64%;
     background-color: yellow;
@@ -123,7 +127,7 @@ img {
     width: 50%;
     height: 60%;
     background-color: darkred;
-    text-align: right;
+    text-align: left;
 }
 
 .principal {
@@ -131,6 +135,7 @@ img {
     height: 25rem;
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse; 
 }
 
 .visita {
@@ -174,10 +179,7 @@ h1 {
     font-size: 45px;
 }
 
-
-
-
-
+/* Responsividade */
 @media (max-width: 1600px) {
     .visita {
         margin-top: 3rem;
@@ -199,11 +201,14 @@ h1 {
         font-size: 3.7rem;
     }
 
+    .bloco-conteudo {
+        height: 80vh;
+    }
 }
 
 @media (max-width: 1240px) {
-    .foto{
-       height: 70%;
+    .foto {
+        height: 70%;
     }
 }
 
@@ -228,6 +233,7 @@ h1 {
         width: 80%;
         height: auto;
     }
+
     .visita {
         margin-top: 5rem;
         height: 50rem;
@@ -237,6 +243,9 @@ h1 {
         height: 280vh;
     }
 
+    .bloco-conteudo {
+        height: 85vh;
+    }
 }
 
 @media (max-width: 1090px) {
@@ -252,30 +261,32 @@ h1 {
         font-size: 35px;
     }
     
-    .bloco-conteudo{
-        height: 50vh;
+    .bloco-conteudo {
+        height: 60vh;
     }
+    
     .visita {
         margin-top: 0rem;
     }
+    
     .principal {
         height: 20rem;
     }
 
-    .visita{
+    .visita {
         height: 40rem;
     }
 
     .container {
         height: 238vh;
     }
-
 }
 
 @media (max-width: 1000px) {
     .visita {
         margin-top: 5rem;
     }
+
     .bloco-conteudo {
         height: 70vh;
     }
@@ -296,6 +307,10 @@ h1 {
     .visita {
         margin-top: 10rem;
     }
+
+    .bloco-conteudo {
+        height: 85vh;
+    }
 }
 
 @media (max-width: 730px) {
@@ -308,13 +323,13 @@ h1 {
         width: auto;
     }
     
-    .titulo-principal  {
+    .titulo-principal {
         display: flex;
         flex-direction: column;
         align-items: center;
     }   
 
-    .titulo-principal h1{
+    .titulo-principal h1 {
         font-size: 2rem;
     }
 
@@ -327,7 +342,7 @@ h1 {
     }
 
     .principal {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
     }
@@ -344,20 +359,20 @@ h1 {
     }
 
     .bloco-conteudo {
-        height: 60vh;
+        height: 75vh;
     }
 
     .visita {
-        margin-top: 5.8rem;
+        margin-top: 6rem;
     }
 
     .primeiro-bloco {
         height: 70vh;
     }
 
-    .foto img{
-        height: 14rem;
-        width: auto;
+    .foto img {
+        height: auto;
+        width: 20rem;
     }
 
     .container {
@@ -367,8 +382,8 @@ h1 {
 
 @media (max-width: 590px) {
     .foto img {
-        height: 14rem;
-        width: auto;
+        height: auto;
+        width: 18rem;
     }
 
     .titulo-principal h1 {
@@ -382,10 +397,8 @@ h1 {
     h1 {
         font-size: 27px;
     }
+
     .visita {
-        margin-top: 5.6rem;
+        margin-top: 7.6rem;
     }
 }
-
-
-
