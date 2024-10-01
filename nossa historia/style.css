@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+.texto h1, .texto p, .texto-esquerda h1, .texto-esquerda p {
+    color: white;
+}
+
 .header-img {
     height: 100vh;
     width: 100%;
@@ -14,22 +23,24 @@
 .fundo {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 319vh;
-    background-color: aqua;
+    height: auto;
+    background-color: rgb(153, 38, 38);
+    flex-direction: column;
 }
 
 .container {
-    width: 90%;
-    height: 229vh;
-    background-color: wheat;
+    width: 100%;
+    background-color: black;
+    margin-top: 5rem;
+    height: auto;
+    padding: 1rem;
 }
 
 .primeiro-bloco {
     width: 100%;
-    height: 105vh;
-    background-color: brown;
+    height: 110vh;
+    background-color: #EBEBEB;
 }
 
 .foto {
@@ -54,8 +65,7 @@ img {
 
 .intro {
     width: 50%;
-    height: 90%;
-    background-color: azure;
+    height: auto;
 }
 
 .card-dog {
@@ -76,7 +86,7 @@ img {
 .bloco-conteudo {
     width: 100%;
     height: 70vh;
-    background-color: darkgreen;
+    background-color: black;
     padding-top: 2rem;
 }
 
@@ -85,7 +95,10 @@ img {
 }
 
 .titulo-principal {
-    background-color: dimgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1rem;
 }
 
 .fundo-txt1 {
@@ -123,10 +136,9 @@ img {
     align-items: center;
 }
 
-.texto-direita {
+.texto-esquerda {
     width: 50%;
-    height: 60%;
-    background-color: darkred;
+    height: auto;
     text-align: left;
 }
 
@@ -141,19 +153,20 @@ img {
 .visita {
     width: 100%;
     height: 30rem;
-    background-color: darksalmon;
+    background-color: black;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
 }
 
 .texto {
     width: 50%;
+    text-align: right;
 }
 
 .imagem {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     width: 50%;
 }
@@ -179,7 +192,28 @@ h1 {
     font-size: 45px;
 }
 
+#sublinhado {
+    position: relative;
+    display: inline-block;
+}
+
+#sublinhado::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px; 
+    background-color: yellow; 
+    bottom: 16px;
+    left: 0;
+}
+
+
+
+
+
+
 /* Responsividade */
+
 @media (max-width: 1600px) {
     .visita {
         margin-top: 3rem;
@@ -204,6 +238,11 @@ h1 {
     .bloco-conteudo {
         height: 80vh;
     }
+
+    .container {
+        height: 154.1vh;
+    }
+
 }
 
 @media (max-width: 1240px) {
@@ -219,7 +258,7 @@ h1 {
     }
 
     .visita {
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -240,11 +279,15 @@ h1 {
     }
 
     .container {
-        height: 280vh;
+        height: 322.7vh;
     }
 
     .bloco-conteudo {
         height: 85vh;
+    }
+
+    .texto {
+        text-align: center;
     }
 }
 
@@ -265,20 +308,17 @@ h1 {
         height: 60vh;
     }
     
-    .visita {
-        margin-top: 0rem;
-    }
-    
     .principal {
         height: 20rem;
     }
 
     .visita {
         height: 40rem;
+        margin-top: 1rem;
     }
 
     .container {
-        height: 238vh;
+        height: 273.5vh;
     }
 }
 
@@ -289,6 +329,10 @@ h1 {
 
     .bloco-conteudo {
         height: 70vh;
+    }
+
+    .container {
+        height: 283.8vh;
     }
 }
 
@@ -310,6 +354,10 @@ h1 {
 
     .bloco-conteudo {
         height: 85vh;
+    }
+
+    .container {
+        height: 296.7vh;
     }
 }
 
@@ -347,11 +395,12 @@ h1 {
         align-items: center;
     }
 
-    .texto-direita {
+    .texto-esquerda {
         text-align: center;
         width: 90%;
         margin-top: 1rem;
-        height: 40%;
+        height: auto;
+        margin-top: 5rem;
     }
 
     .primeiro-bloco {
@@ -376,7 +425,7 @@ h1 {
     }
 
     .container {
-        height: 215.5vh;
+        height: 246.4vh;
     }
 }
 
@@ -399,6 +448,10 @@ h1 {
     }
 
     .visita {
-        margin-top: 7.6rem;
+        margin-top: 6.8rem;
+    }
+
+    .container {
+        height: 248.5vh;
     }
 }
