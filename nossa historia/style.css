@@ -32,7 +32,6 @@ html, body{
 .container {
     width: 100%;
     background-color: black;
-    margin-top: 5rem;
     height: auto;
     padding: 1rem;
 }
@@ -218,6 +217,10 @@ h1 {
     .visita {
         margin-top: 3rem;
     }
+
+    .container {
+        height: 131.5vh;
+    }
 }
 
 @media (max-width: 1500px) {
@@ -227,6 +230,10 @@ h1 {
 
     h1 {
         font-size: 40px;
+    }
+
+    .container {
+        height: 131.5vh;
     }
 }
 
@@ -240,7 +247,7 @@ h1 {
     }
 
     .container {
-        height: 154.1vh;
+        height: 132vh;
     }
 
 }
@@ -248,6 +255,10 @@ h1 {
 @media (max-width: 1240px) {
     .foto {
         height: 70%;
+    }
+
+    .container {
+        height: 130vh;
     }
 }
 
@@ -279,7 +290,7 @@ h1 {
     }
 
     .container {
-        height: 322.7vh;
+        height: 179vh;
     }
 
     .bloco-conteudo {
@@ -318,7 +329,7 @@ h1 {
     }
 
     .container {
-        height: 273.5vh;
+        height: 140vh;
     }
 }
 
@@ -332,7 +343,7 @@ h1 {
     }
 
     .container {
-        height: 283.8vh;
+        height: 150vh;
     }
 }
 
@@ -344,6 +355,10 @@ h1 {
     .foto img {
         height: 18rem;
         width: auto;
+    }
+
+    .container {
+        height: 150vh;
     }
 }
 
@@ -357,7 +372,7 @@ h1 {
     }
 
     .container {
-        height: 296.7vh;
+        height: 160vh;
     }
 }
 
@@ -425,7 +440,7 @@ h1 {
     }
 
     .container {
-        height: 246.4vh;
+        height: 149vh;
     }
 }
 
@@ -452,6 +467,6 @@ h1 {
     }
 
     .container {
-        height: 248.5vh;
+        height: 150vh;
     }
 }
