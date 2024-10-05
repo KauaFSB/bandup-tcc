@@ -10,6 +10,12 @@ html, body{
     height: 100%;
 }
 
+main{
+    max-width: 2000px;
+    height: auto;
+    margin: auto;
+}
+
 .texto h1, .texto p, .texto-esquerda h1, .texto-esquerda p {
     color: white;
 }
@@ -213,6 +219,7 @@ h1 {
 
 /* Responsividade */
 
+
 @media (max-width: 1600px) {
     .visita {
         margin-top: 3rem;
@@ -220,6 +227,11 @@ h1 {
 
     .container {
         height: 131.5vh;
+    }
+
+    .foto img{
+        width: 50rem;
+        height: auto;
     }
 }
 
