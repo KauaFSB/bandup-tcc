@@ -46,6 +46,7 @@ main{
     width: 100%;
     height: 110vh;
     background-color: #EBEBEB;
+    padding-left: 1rem;
 }
 
 .foto {
