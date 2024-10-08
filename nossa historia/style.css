@@ -8,6 +8,7 @@
 html, body{
     width: 100%;
     height: 100%;
+    background-color: black;
 }
 
 main{
@@ -79,14 +80,14 @@ img {
     align-items: center;
     width: 40%;
     height: 90%;
-    background-color: blueviolet;
+    background-color: #FFDF00;
     border-radius: 70px 0 0 70px;
     padding: 1rem;
 }
 
 .card-dog img {
     width: 18vh;
-    height: 18vh;
+    height: 20vh;
 }
 
 .bloco-conteudo {
@@ -109,7 +110,7 @@ img {
 
 .fundo-txt1 {
     width: 64%;
-    background-color: yellow;
+    background-color: #FFDF00;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +119,7 @@ img {
 
 .fundo-txt2 {
     width: 105%;
-    background-color: yellow;
+    background-color: #FFDF00;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,7 +128,7 @@ img {
 
 .fundo-txt3 {
     width: 84%;
-    background-color: yellow;
+    background-color: #FFDF00;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +137,7 @@ img {
 
 .fundo-txt4 {
     width: 37%;
-    background-color: yellow;
+    background-color: #FFDF00;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,7 +209,7 @@ h1 {
     position: absolute;
     width: 100%;
     height: 3px; 
-    background-color: yellow; 
+    background-color: #FFDF00; 
     bottom: 16px;
     left: 0;
 }

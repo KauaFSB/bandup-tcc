@@ -15,8 +15,8 @@ body {
     background: white;
     overflow: hidden;
 }
+
 .container {
-    width: 80%;
     width: 40%;
     display: flex;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -24,7 +24,13 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #f3f1f1;
-    max-height: 90vh;
+    height: 90vh;
+}
+
+.form {
+    max-width: 2000px;
+    height: auto;
+    margin: auto;
 }
 
 .form-image{
