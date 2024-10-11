@@ -20,8 +20,68 @@ main {
     align-items: center;
 }
 
-.footer-img {
+.header-img {
     height: 100vh;
     width: 100%;
     background-color: antiquewhite;
 }
+
+
+
+
+
+/* ESTILO DA DIV APRESENTACAO */
+.apresentacao {
+    height: auto;
+    width: 100%;
+    background-color: aqua;
+    padding-bottom: 5%;
+}
+
+.apresentacao-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: brown;
+    margin-top: 5%;
+}
+
+.apresentacao-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: azure;
+    margin-top: 5%;
+}
+
+.apresentacao-txt {
+    height: auto;
+    width: 40%;
+    background-color: brown;
+}
+
+.card-dog {
+    border-radius: 30rem 0 0 30rem;
+    display: flex;
+    height: auto;
+    width: 40%;
+    background-color: brown;
+    padding-left: 1rem;
+}
+
+.card-dog img {
+    height: 10rem;
+}
+
+.apresentacao-img img {
+    width: 50%;
+    height: auto;
+}
+/* FIM DO ESTILO DA DIV APRESENTACAO */
+
+
+
+/* ESTILO DA DIV APRESENTACAO */
