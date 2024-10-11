@@ -18,6 +18,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 1rem;
 }
 
 .header-img {
@@ -30,7 +31,7 @@ main {
 
 
 
-/* ESTILO DA DIV APRESENTACAO */
+/* ESTILO DA SEÇÃO APRESENTACAO */
 .apresentacao {
     height: auto;
     width: 100%;
@@ -73,15 +74,115 @@ main {
 }
 
 .card-dog img {
-    height: 10rem;
+    width: 15%;        
+    height: auto;       
+    max-height: 150px;  
 }
+
+@media (min-width: 2000px) {
+    .card-dog img {
+        width: auto;     
+        height: 150px;   
+        max-width: 100%; 
+    }
+}
+
 
 .apresentacao-img img {
     width: 50%;
     height: auto;
 }
-/* FIM DO ESTILO DA DIV APRESENTACAO */
+/* FIM DO ESTILO DA SEÇÃO APRESENTACAO */
 
 
 
-/* ESTILO DA DIV APRESENTACAO */
+/* ESTILO DA SEÇÃO CONTEUDO-PRINCIPAL */
+/* ESTILO DA DIV BLOCO-TEXTO */
+.conteudo-principal {
+    background-color: darkolivegreen;
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+}
+
+.bloco-texto {
+    height: auto;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto-principal {
+    background-color: chartreuse;
+    width: 40%;
+    height: 40vh;
+    text-align: start;
+}
+
+.titulo-principal {
+    font-family: Arial, sans-serif;  
+    font-weight: bold;               
+    font-size: 5rem;                 
+    line-height: 1.2;                
+    text-transform: uppercase;       
+    max-width: 100%;                 
+    display: flex;                   
+    flex-direction: column;         
+    align-items: flex-end;        
+}
+
+.titulo-principal span {
+    display: block;                  
+    background-color: yellow;         
+    padding: 5px 10px;               
+    margin-bottom: 5px;               
+    box-sizing: border-box;           
+    text-align: left;               
+    width: max-content;              
+}
+
+
+@media (max-width: 1050px) {
+    .titulo-principal {
+        font-size: 4rem;           
+    }
+}
+
+@media (max-width: 850px) {
+    .titulo-principal {
+        font-size: 3rem;        
+    }
+}
+/* FIM DO ESTILO DA DIV BLOCO-TEXTO */
+
+/* ESTILO DA DIV VISITA */
+.visita {
+    width: 100%;
+    height: 100vh;
+    background-color: brown;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.visita-img {
+    width: 40%;
+    height: 100%;
+    background-color: chartreuse;
+}
+
+.visita-txt {
+    width: 40%;
+    height: 100%;
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* FIM DO ESTILO DA DIV VISITA */
+/* FIM DO ESTILO DA SEÇÃO CONTEUDO-PRINCIPAL */
