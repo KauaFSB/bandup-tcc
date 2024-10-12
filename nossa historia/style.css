@@ -62,6 +62,7 @@ main {
     height: auto;
     width: 40%;
     background-color: brown;
+    font-size: 1.5rem;
 }
 
 .card-dog {
@@ -79,6 +80,11 @@ main {
     max-height: 150px;  
 }
 
+.apresentacao-img img {
+    width: 50%;
+    height: auto;
+}
+
 @media (min-width: 2000px) {
     .card-dog img {
         width: auto;     
@@ -87,11 +93,30 @@ main {
     }
 }
 
+@media (max-width: 750px) {
+   .apresentacao-content {
+        flex-direction: column;
+   }
+   
+   .apresentacao-txt {
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 80%;
+        font-size: 1.2rem;
+   }
 
-.apresentacao-img img {
-    width: 50%;
-    height: auto;
+   .card-dog {
+        border-radius: 30rem;
+        justify-content: center;
+   }
+
+   .card-dog img {
+        width: 30%;
+        height: auto;
+   }
 }
+
+
 /* FIM DO ESTILO DA SEÇÃO APRESENTACAO */
 
 
@@ -118,8 +143,9 @@ main {
 .texto-principal {
     background-color: chartreuse;
     width: 40%;
-    height: 40vh;
+    height: auto;
     text-align: start;
+    font-size: 2rem;
 }
 
 .titulo-principal {
@@ -149,6 +175,10 @@ main {
     .titulo-principal {
         font-size: 4rem;           
     }
+
+    .texto-principal {
+        font-size: 1.6rem;
+    }
 }
 
 @media (max-width: 850px) {
@@ -161,26 +191,71 @@ main {
 /* ESTILO DA DIV VISITA */
 .visita {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: brown;
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
+    padding-top: 1rem;
 }
 
 .visita-img {
     width: 40%;
-    height: 100%;
-    background-color: chartreuse;
-}
-
-.visita-txt {
-    width: 40%;
-    height: 100%;
+    height: auto;
     background-color: chartreuse;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.visita-txt {
+    width: 40%;
+    height: auto;
+    background-color: chartreuse;
+    text-align: end;
+}
+
+.visita-img img {
+    width: 100%;
+}
+
+@media (max-width: 650px) {
+    .bloco-texto {
+        flex-direction: column;
+    }
+
+    .texto-principal {
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 80%;
+    }
+
+    .titulo-principal {
+        align-items: center; 
+    }
+
+    .titulo-principal span {
+        text-align: center;
+    }
+
+    .visita {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .visita-txt {
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+}
+
+@media (max-width: 430px) {
+    .titulo-principal {
+        font-size: 2rem;
+    }
 }
 
 
