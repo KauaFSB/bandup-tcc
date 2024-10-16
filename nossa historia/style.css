@@ -12,7 +12,7 @@ body {
 }
 
 main {
-    background-color: rgb(255, 0, 0);
+    background-color: black;
     width: 100%;
     height: auto;
     display: flex;
@@ -35,8 +35,9 @@ main {
 .apresentacao {
     height: auto;
     width: 100%;
-    background-color: aqua;
+    background-color: #EBEBEB;
     padding-bottom: 5%;
+    padding-left: 1rem;
 }
 
 .apresentacao-img {
@@ -44,7 +45,6 @@ main {
     justify-content: center;
     width: 100%;
     height: auto;
-    background-color: brown;
     margin-top: 5%;
 }
 
@@ -54,15 +54,13 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: azure;
     margin-top: 5%;
 }
 
 .apresentacao-txt {
     height: auto;
     width: 40%;
-    background-color: brown;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .card-dog {
@@ -70,7 +68,7 @@ main {
     display: flex;
     height: auto;
     width: 40%;
-    background-color: brown;
+    background-color: yellow;
     padding-left: 1rem;
 }
 
@@ -124,7 +122,6 @@ main {
 /* ESTILO DA SEÇÃO CONTEUDO-PRINCIPAL */
 /* ESTILO DA DIV BLOCO-TEXTO */
 .conteudo-principal {
-    background-color: darkolivegreen;
     width: 100%;
     height: auto;
     padding-top: 2rem;
@@ -133,18 +130,18 @@ main {
 .bloco-texto {
     height: auto;
     width: 100%;
-    background-color: blue;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 }
 
 .texto-principal {
-    background-color: chartreuse;
     width: 40%;
     height: auto;
     text-align: start;
+    color: white;
     font-size: 2rem;
 }
 
@@ -171,38 +168,51 @@ main {
 }
 
 
-@media (max-width: 1050px) {
+@media (max-width: 1500px) {
     .titulo-principal {
         font-size: 4rem;           
     }
-
-    .texto-principal {
-        font-size: 1.6rem;
-    }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1260px) {
     .titulo-principal {
-        font-size: 3rem;        
+        font-size: 3.5rem;           
     }
 }
+
+@media (max-width: 1130px) {
+    .titulo-principal {
+        font-size: 3rem;           
+    }
+}
+
+@media (max-width: 1012px) {
+    .titulo-principal {
+        font-size: 2.5rem;           
+    }
+}
+
+@media (max-width: 866px) {
+    .titulo-principal {
+        font-size: 2rem;        
+    }
+}
+
 /* FIM DO ESTILO DA DIV BLOCO-TEXTO */
 
 /* ESTILO DA DIV VISITA */
 .visita {
     width: 100%;
     height: auto;
-    background-color: brown;
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
-    padding-top: 1rem;
+    padding: 1rem;
 }
 
 .visita-img {
     width: 40%;
     height: auto;
-    background-color: chartreuse;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,17 +221,23 @@ main {
 .visita-txt {
     width: 40%;
     height: auto;
-    background-color: chartreuse;
     text-align: end;
+    color: white;
+    font-size: 2rem;
 }
 
 .visita-img img {
     width: 100%;
 }
 
+#visitaTxt1 {
+    padding-bottom: 2rem;
+}
+
 @media (max-width: 650px) {
     .bloco-texto {
         flex-direction: column;
+        padding: 0;
     }
 
     .texto-principal {
@@ -260,4 +276,57 @@ main {
 
 
 /* FIM DO ESTILO DA DIV VISITA */
+
+/* RESPONSIVIDADE DE TEXTOS */
+@media (max-width: 1500px) {
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bolder;
+        padding-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1260px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1130px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1012px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 866px) {
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+}
 /* FIM DO ESTILO DA SEÇÃO CONTEUDO-PRINCIPAL */
