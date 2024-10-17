@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
@@ -15,11 +16,11 @@ main {
     height: auto;
     padding-bottom: 1rem;
     background-color: black;
-    overflow: hidden; /* Para evitar o estouro da imagem parallax */
+    overflow: hidden;
 }
 
 header {
-    background-color: aqua;
+    background-color: black;
     width: 100%;
     height: 4rem;
     padding: 0 1rem;
@@ -29,24 +30,91 @@ header {
 }
 
 .troca-lang {
-    width: 3rem;
-    height: 3rem;
-    background-color: blue;
-}
-
-.logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: auto;
+    justify-content: start;
+    width: 5rem;
     height: auto;
-    padding-top: 2rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.troca-lang:hover .dropdown-lang {
+    display: block;
+    top: 2.8vw;
+}
+
+.troca-lang svg {
+    width: 100%;
+    height: 100%;
 }
 
 .menu {
+    position: relative;
     width: 3rem;
     height: 3rem;
-    background-color: blue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.menu:hover .dropdown-menu {
+    display: block;
+}
+
+.menu svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.dropdown-lang {
+    position: absolute;
+    top: 4rem;
+     background-color: black;
+    color: white;
+    width: 7rem;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.dropdown-lang a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: c;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-lang a:hover {
+    background-color: grey;
+}
+
+.dropdown-lang a.selected {
+    background-color: grey;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    background-color: black;
+    color: white;
+    width: 7rem;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropdown-menu a:hover {
+    background-color: grey;
 }
 
 .imagem-header {
@@ -64,7 +132,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 5rem;
+    padding: 0 5vw;
     text-align: center;
 }
 
@@ -72,7 +140,7 @@ header {
     text-transform: uppercase;
     background-color: #D1DB58;
     padding: 1rem 5rem;
-    font-size: 24pt;
+    font-size: 22pt;
     display: flex;
     margin-top: 1rem;
     align-items: center;
@@ -84,7 +152,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem 15rem 3rem 0;
+    padding: 3rem 10vw 3rem 0;
 }
 
 .imagem-lateral {
@@ -101,7 +169,6 @@ header {
 .texto-lateral {
     width: 30%;
     height: auto;
-    background-color: blue;
     text-align: center;
 }
 
@@ -135,7 +202,7 @@ header {
     z-index: 1; 
     text-align: center;
     color: white;
-    padding: 2rem;
+    padding: 10rem 0 10rem 0;
     width: 80%; 
 }
 
@@ -149,8 +216,9 @@ header {
 }
 
 .segundoBloco-txt {
-    width: 80%;
+    width: 100%;
     text-align: center;
+    padding: 10vw;
 }
 
 h1 {
@@ -170,36 +238,38 @@ p {
 
 @media (max-width: 991.5px) {
     p {
-        font-size: 1.7rem;
+        font-size: 2vw;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 3vw;
     }
 
     .texto-lateral {
         width: 40%;
     }
 
-    .primeiro-bloco {
-        padding: 3rem 10rem 3rem 0;
+    .parallax-conteudo {
+        padding: 5rem 0 5rem 0;
+    }
+
+    .segundoBloco-txt {
+        width: 80%;
+        text-align: center;
+        padding: 5rem 0 5rem 0;
+    }
+
+    .titulo-principal h1 {
+        font-size: 2.6vw;
     }
 }
 
 @media (max-width: 768px) {
-    p {
-        font-size: 1.7rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
     .texto-lateral {
         width: 40%;
     }
 
-    .primeiro-bloco {
-        padding: 3rem 10rem 3rem 0;
+    .titulo-principal h1 {
+        font-size: 3vw;
     }
 }
