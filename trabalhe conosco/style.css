@@ -14,6 +14,8 @@ body {
     align-items: center;
     background: white;
     overflow: hidden;
+    max-width: 2000px;
+    margin: auto;
 }
 
 .container {

@@ -40,6 +40,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
+    margin-left: 2rem;
 }
 
 .menu-icon {
@@ -47,19 +48,12 @@ header {
     cursor: pointer;
 }
 
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #000;
-    margin-top: 1.3rem;
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-    border-top: solid white;
-    width: 150px;
-}
-
-.menu:hover .dropdown-menu {
-    display: block;
+.agrupa-menu {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .dropdown-menu a {
@@ -80,17 +74,6 @@ header {
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-.dropdown-lang {
-    display: none;
-    position: absolute;
-    background-color: #000;
-    margin-top: 1.3rem;
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-    border-top: solid white;
-    width: 120px;
 }
 
 .troca-lang:hover .dropdown-lang {
@@ -133,13 +116,12 @@ header {
     width: auto;
 }
 
-
 .dropdown-menu{
     display: none;
     position: absolute;
     background-color: #000000;
     margin-top: 1.3rem;
-    width: 7rem;
+    width: 12rem;
     padding: 10px;
     border-radius: 0 0 5px 5px;
     border-top: solid white;
@@ -160,40 +142,14 @@ header {
     display: block;
 }
 
-.dropdown-menu a, .dropdown-lang a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 5px 0;
-}
-
 .dropdown-menu a:hover, .dropdown-lang a:hover {
     background-color:#555;
     border-radius: 3px;
 }
 
-.troca-lang {
-    position: relative;
-}
-
-.dropdown-lang {
-    left: 0;
-}
-
-.menu {
-    position: relative;
-}
-
 .dropdown-menu {
     top: 40px;
     right: 0;
-}
-
-
-.troca-lang {
-    height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .troca-lang img{
@@ -202,11 +158,8 @@ header {
     cursor: pointer;
 }
 
-.select-menu {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: auto;
+#span-b2b {
+    color: yellow;
 }
 
 .imagem-header {
