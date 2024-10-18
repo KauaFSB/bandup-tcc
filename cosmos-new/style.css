@@ -35,7 +35,88 @@ header {
     cursor: pointer;
 }
 
-.menu-icon svg{
+.menu {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    height: 100%;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    margin-top: 1.3rem;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    border-top: solid white;
+    width: 150px;
+}
+
+.menu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+.troca-lang {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-lang {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    margin-top: 1.3rem;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    border-top: solid white;
+    width: 120px;
+}
+
+.troca-lang:hover .dropdown-lang {
+    display: block;
+}
+
+.dropdown-lang a {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-lang a:hover {
+    background-color: #555;
+    border-radius: 3px;
+}
+
+#selected-lang {
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+}
+
+
+.menu-icon img{
     width: 25px;
     height: auto;
     cursor: pointer;
@@ -53,24 +134,32 @@ header {
 }
 
 
-/* Estiliza o dropdown escondido inicialmente */
-.dropdown-menu, .dropdown-lang {
+.dropdown-menu{
     display: none;
     position: absolute;
     background-color: #000000;
     margin-top: 1.3rem;
-    width: auto;
+    width: 7rem;
     padding: 10px;
     border-radius: 0 0 5px 5px;
     border-top: solid white;
 }
 
-/* Exibe o dropdown quando o hover é ativado */
+.dropdown-lang {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    margin-top: 8.8rem;
+    width: 7rem;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    border-top: solid white;
+}
+
 .menu:hover .dropdown-menu, .troca-lang:hover .dropdown-lang {
     display: block;
 }
 
-/* Estilos adicionais para os links do dropdown */
 .dropdown-menu a, .dropdown-lang a {
     display: block;
     color: white;
@@ -78,42 +167,33 @@ header {
     padding: 5px 0;
 }
 
-/* Muda a cor ao passar o mouse sobre os itens */
 .dropdown-menu a:hover, .dropdown-lang a:hover {
     background-color:#555;
     border-radius: 3px;
 }
 
-/* Estilos para a posição da troca de idioma */
 .troca-lang {
     position: relative;
 }
 
 .dropdown-lang {
-    top: 40px; /* Ajuste conforme o tamanho do ícone */
     left: 0;
 }
 
-/* Estilos para a posição do menu dropdown */
 .menu {
     position: relative;
 }
 
 .dropdown-menu {
-    top: 40px; /* Ajuste conforme o tamanho do ícone */
+    top: 40px;
     right: 0;
 }
-
-
-
-
 
 
 .troca-lang {
     height: 100%;
     display: flex;
     align-items: center;
-    margin-right: 30px;
 }
 
 .troca-lang img{
