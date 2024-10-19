@@ -30,6 +30,48 @@ header {
     padding-right: 5%;
 }
 
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.estrelas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    pointer-events: none;
+}
+
+.estrelas span {
+    position: relative;
+    width: 2vw; 
+    height: 2vw; 
+    background: white;
+    margin: 0 1vw; 
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px white,
+                0 0 50px #fff,
+                0 0 100px #fff;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(130s / var(--i));
+    opacity: .3;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
 #logo {
     width: 12rem;
     cursor: pointer;
@@ -98,8 +140,7 @@ header {
     font-size: 16px;
 }
 
-
-.menu-icon img{
+.menu-icon img {
     width: 25px;
     height: auto;
     cursor: pointer;
@@ -116,7 +157,7 @@ header {
     width: auto;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     display: none;
     position: absolute;
     background-color: #000000;
@@ -138,12 +179,14 @@ header {
     border-top: solid white;
 }
 
-.menu:hover .dropdown-menu, .troca-lang:hover .dropdown-lang {
+.menu:hover .dropdown-menu,
+.troca-lang:hover .dropdown-lang {
     display: block;
 }
 
-.dropdown-menu a:hover, .dropdown-lang a:hover {
-    background-color:#555;
+.dropdown-menu a:hover,
+.dropdown-lang a:hover {
+    background-color: #555;
     border-radius: 3px;
 }
 
@@ -152,7 +195,7 @@ header {
     right: 0;
 }
 
-.troca-lang img{
+.troca-lang img {
     height: auto;
     width: 30px;
     cursor: pointer;
@@ -207,7 +250,7 @@ header {
 
 .imagem-lateral img {
     width: auto;
-    border-radius: 0 2rem  2rem 0;
+    border-radius: 0 2rem 2rem 0;
     height: 30vw;
 }
 
@@ -244,11 +287,11 @@ header {
 
 .parallax-conteudo {
     position: relative;
-    z-index: 1; 
+    z-index: 1;
     text-align: center;
     color: white;
     padding: 10rem 0 10rem 0;
-    width: 80%; 
+    width: 80%;
 }
 
 .segundo-bloco {
@@ -307,6 +350,11 @@ p {
     .titulo-principal h1 {
         font-size: 2.6vw;
     }
+    
+    .estrelas span {
+        width: 2vw; 
+        height: 2vw; 
+    }
 }
 
 @media (max-width: 768px) {
@@ -316,5 +364,10 @@ p {
 
     .titulo-principal h1 {
         font-size: 3vw;
+    }
+
+    .estrelas span {
+        width: 3vw; 
+        height: 3vw;
     }
 }
