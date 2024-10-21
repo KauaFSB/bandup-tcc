@@ -33,7 +33,7 @@ header {
 .container {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -50,8 +50,8 @@ header {
 
 .estrelas span {
     position: relative;
-    width: 2vw; 
-    height: 2vw; 
+    width: .8vw; 
+    height: .8vw; 
     background: white;
     margin: 0 1vw; 
     border-radius: 50%;
@@ -59,8 +59,9 @@ header {
                 0 0 50px #fff,
                 0 0 100px #fff;
     animation: animate 15s linear infinite;
-    animation-duration: calc(130s / var(--i));
+    animation-duration: calc(400s / var(--i));
     opacity: .3;
+    z-index: 0;
 }
 
 @keyframes animate {
@@ -68,7 +69,7 @@ header {
         transform: translateY(100vh) scale(0);
     }
     100% {
-        transform: translateY(-10vh) scale(1);
+        transform: translateY(-90vh) scale(1);
     }
 }
 
@@ -222,6 +223,7 @@ header {
     align-items: center;
     padding: 0 5vw;
     text-align: center;
+    z-index: 1;
 }
 
 .titulo-principal h1 {
@@ -232,6 +234,7 @@ header {
     display: flex;
     margin-top: 1rem;
     align-items: center;
+    z-index: 1;
 }
 
 .primeiro-bloco {
@@ -246,6 +249,7 @@ header {
 .imagem-lateral {
     width: 50%;
     height: auto;
+    z-index: 1;
 }
 
 .imagem-lateral img {
@@ -258,6 +262,7 @@ header {
     width: 30%;
     height: auto;
     text-align: center;
+    z-index: 1;
 }
 
 .parallax {
@@ -307,6 +312,7 @@ header {
     width: 100%;
     text-align: center;
     padding: 10vw;
+    z-index: 1;
 }
 
 h1 {
