@@ -17,7 +17,13 @@ const translations = {
         oQueFazemos: 'O QUE FAZEMOS?',
         oQueFazemosTexto: 'O Grupo Cosmos é o epicentro da cultura pop e do entretenimento, criando experiências excepcionais para os fãs em todo o mundo. Nós oferecemos uma vasta gama de produtos e serviços, desde roupas estilosas até itens de decoração e colecionáveis, tudo com a qualidade e autenticidade que os fãs merecem. Com uma rede de licenciamentos ampla e colaborações com marcas renomadas, estamos sempre inovando e expandindo nossa presença em eventos e convenções, consolidando nosso compromisso em entregar o melhor da cultura pop para nossos clientes.',
         objetivos: 'OBJETIVOS',
-        objetivosTexto: 'O Grupo Cosmos visa promover a sinergia entre as empresas Piticas e BandUP para expandir os negócios, diversificar a oferta de produtos, promover a inovação colaborativa e impulsionar o crescimento sustentável a longo prazo. Com uma abordagem estratégica e orientada para resultados, o grupo está comprometido em alcançar a excelência operacional e moldar o futuro do mercado.'
+        objetivosTexto: 'O Grupo Cosmos visa promover a sinergia entre as empresas Piticas e BandUP para expandir os negócios, diversificar a oferta de produtos, promover a inovação colaborativa e impulsionar o crescimento sustentável a longo prazo. Com uma abordagem estratégica e orientada para resultados, o grupo está comprometido em alcançar a excelência operacional e moldar o futuro do mercado.',
+        ancoraTC: 'Trabalhe Conosco',
+        ancoraLojas: 'Trabalhe Conosco',
+        ancoraMarcas: 'Trabalhe Conosco',
+        ancoraEventos: 'Trabalhe Conosco',
+        ancoraHistoria: 'Trabalhe Conosco',
+        ancoraB2B: 'Trabalhe Conosco'
     },
     'EN': {
         title: 'COSMOS',
@@ -27,7 +33,13 @@ const translations = {
         oQueFazemos: 'WHAT DO WE DO?',
         oQueFazemosTexto: 'The Cosmos Group is the epicenter of pop culture and entertainment, creating exceptional experiences for fans around the world. We offer a wide range of products and services, from stylish clothes to decorative items and collectibles, all with the quality and authenticity that fans deserve. With a wide network of licensing and collaborations with renowned brands, we are always innovating and expanding our presence at events and conventions, consolidating our commitment to deliver the best of pop culture to our clients.',
         objetivos: 'OBJECTIVES',
-        objetivosTexto: 'The Cosmos Group aims to promote synergy between Piticas and BandUP companies to expand business, diversify product offerings, foster collaborative innovation and drive long-term sustainable growth. With a strategic and results-oriented approach, the group is committed to achieving operational excellence and shaping the future of the market.'
+        objetivosTexto: 'The Cosmos Group aims to promote synergy between Piticas and BandUP companies to expand business, diversify product offerings, foster collaborative innovation and drive long-term sustainable growth. With a strategic and results-oriented approach, the group is committed to achieving operational excellence and shaping the future of the market.',
+        ancoraTC: 'Work With Us',
+        ancoraLojas: 'Our Stores',
+        ancoraMarcas: 'Our Brands',
+        ancoraEventos: 'Events',
+        ancoraHistoria: 'Our History',
+        ancoraB2B: 'Be a B2B Client'
     }
 };
 
@@ -40,6 +52,12 @@ function changeLanguage(language) {
     document.title = translations[language].title;
 
     // Atualiza o conteúdo principal
+    document.getElementById('menuTC').textContent = translations[language].ancoraTC;
+    document.getElementById('menuLojas').textContent = translations[language].ancoraLojas;
+    document.getElementById('menuMarcas').textContent = translations[language].ancoraMarcas;
+    document.getElementById('menuEventos').textContent = translations[language].ancoraEventos;
+    document.getElementById('menuHistoria').textContent = translations[language].ancoraHistoria;
+    document.getElementById('menuB2B').textContent = translations[language].ancoraB2B;
     document.getElementById('titulo-principal').textContent = translations[language].mainTitle;
     document.querySelector('.texto-lateral h1').textContent = translations[language].quemSomos;
     document.querySelector('.texto-lateral p').textContent = translations[language].quemSomosTexto;

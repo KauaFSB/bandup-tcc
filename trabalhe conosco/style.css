@@ -243,19 +243,8 @@ textarea {
     text-align: center;
 }
 
-@media screen and (max-width: 1330px) {
-    .form-image {
-        display: none;
-    }
-    .container {
-        width: 50%;
-    }
-    .form {
-        width: 100%;
-    }
-}
 
-@media screen and (max-width: 1064px) {
+@media screen and (max-width: 991.5px) {
     .container {
         width: 90%;
         height: auto;
@@ -276,5 +265,12 @@ textarea {
     .dropdown-content a {
         font-size: 13px;
         padding: 10px 14px;
+    }
+    .form-image {
+        display: none   ;
+    }
+    .input-group {
+        display: flex;
+        justify-content: center;
     }
 }

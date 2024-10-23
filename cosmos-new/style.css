@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans';
 }
 
 body {
@@ -375,5 +378,9 @@ p {
     .estrelas span {
         width: 3vw; 
         height: 3vw;
+    }
+
+    .troca-lang {
+        display: none;
     }
 }
