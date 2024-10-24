@@ -19,11 +19,11 @@ const translations = {
         objetivos: 'OBJETIVOS',
         objetivosTexto: 'O Grupo Cosmos visa promover a sinergia entre as empresas Piticas e BandUP para expandir os negócios, diversificar a oferta de produtos, promover a inovação colaborativa e impulsionar o crescimento sustentável a longo prazo. Com uma abordagem estratégica e orientada para resultados, o grupo está comprometido em alcançar a excelência operacional e moldar o futuro do mercado.',
         ancoraTC: 'Trabalhe Conosco',
-        ancoraLojas: 'Trabalhe Conosco',
-        ancoraMarcas: 'Trabalhe Conosco',
-        ancoraEventos: 'Trabalhe Conosco',
-        ancoraHistoria: 'Trabalhe Conosco',
-        ancoraB2B: 'Trabalhe Conosco'
+        ancoraLojas: 'Lojas',
+        ancoraMarcas: 'Marcas',
+        ancoraEventos: 'Eventos',
+        ancoraHistoria: 'Nossa História',
+        ancoraB2B: 'Seja um cliente B2B'
     },
     'EN': {
         title: 'COSMOS',
@@ -82,4 +82,9 @@ function visivel(elemento){
     return (rect.bottom > 0 && rect.top < (window.innerHeight - 150 || document.documentElement.clientHeight - 150));
 }
 
+let menu = document.querySelector('#menu-icon');
+let menuItems = document.querySelector('.menu-items');
 
+menu.onclick = () => {
+    menuItems.classList.toggle('aberto');
+}
