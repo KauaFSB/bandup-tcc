@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
     <title>COSMOS</title>
 </head>
@@ -12,13 +13,14 @@
     <header>
         <div class="logo">
             <a href="#">
-                <svg width="180" height="40" viewBox="0 -15 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" id="logo">
+                <svg width="180" height="40" viewBox="0 -15 200 60" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    id="logo">
                     <path
                         d="M15.2247 30C6.83007 30 0 23.2721 0 15.0009C0 6.72967 6.83007 0 15.2247 0C20.6089 0 25.646 2.84744 28.3705 7.42957C28.8938 8.3102 28.5935 9.44067 27.6997 9.95629C26.806 10.4719 25.6586 10.176 25.1353 9.29537C23.0816 5.84017 19.2835 3.69263 15.2247 3.69263C8.89635 3.69263 3.74952 8.76558 3.74952 14.9991C3.74952 21.2327 8.89815 26.3056 15.2247 26.3056C19.3123 26.3056 23.123 24.1368 25.1695 20.6444C25.6874 19.762 26.8329 19.459 27.7303 19.9693C28.6259 20.4796 28.9334 21.6083 28.4155 22.4925C25.7018 27.1224 20.6467 29.9982 15.2247 29.9982V30Z"
                         fill="white" />
                     <path
                         d="M131.888 24.7818C126.414 24.7818 121.961 20.3945 121.961 15.0009C121.961 9.60724 126.414 5.22002 131.888 5.22002C137.362 5.22002 141.815 9.60724 141.815 15.0009C141.815 20.3945 137.362 24.7818 131.888 24.7818ZM131.888 8.91265C128.482 8.91265 125.709 11.6431 125.709 15.0009C125.709 18.3586 128.48 21.0891 131.888 21.0891C135.296 21.0891 138.067 18.3586 138.067 15.0009C138.067 11.6431 135.296 8.91265 131.888 8.91265Z"
-                        fill="white"/>
+                        fill="white" />
                     <path
                         d="M44.1338 24.7818C38.6597 24.7818 34.207 20.3945 34.207 15.0009C34.207 9.60724 38.6597 5.22002 44.1338 5.22002C49.608 5.22002 54.0606 9.60724 54.0606 15.0009C54.0606 20.3945 49.608 24.7818 44.1338 24.7818ZM44.1338 8.91265C40.7278 8.91265 37.9548 11.6431 37.9548 15.0009C37.9548 18.3586 40.726 21.0891 44.1338 21.0891C47.5417 21.0891 50.3129 18.3586 50.3129 15.0009C50.3129 11.6431 47.5417 8.91265 44.1338 8.91265Z"
                         fill="white" />
@@ -33,20 +35,38 @@
                         fill="white" />
                 </svg>
             </a>
-        </div>
-        
-   <div class="agrupa-menu">
-    <div class="troca-lang">
-        <span id="selected-lang">PT-BR</span>
-        <img src="img/earth-globe-svgrepo-com.svg" alt="Globo" id="globe-icon">
-        
-        <div class="dropdown-lang">
-            <a href="#" onclick="changeLanguage('PT-BR')">Português</a>
-            <a href="#" onclick="changeLanguage('EN')">English</a>
-        </div>
-    </div>
+        </div> <!--LOGO-->
 
-    <div class="menu">
+        <div class="menu-items">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" id="menuTC">Trabalhe Conosco</a></li>
+                <li><a href="#" id="menuLojas">Lojas</a></li>
+                <li><a href="#" id="menuMarcas">Marcas</a></li>
+                <li><a href="#" id="menuEventos">Eventos</a></li>
+                <li><a href="#" id="menuHistoria">História</a></li>
+                <li><a href="#">Cosmos</a></li>
+                <li><a href="#" id="menuB2B">Seja um cliente <span id="span-b2b">B2B</span></a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="troca-lang">
+                <span id="selected-lang">PT-BR</span>
+                <img src="img/earth-globe-svgrepo-com.svg" alt="Globo" id="globe-icon">
+
+                <div class="dropdown-lang">
+                    <a href="#" onclick="mudaIdioma('PT-BR')">Português</a>
+                    <a href="#" onclick="mudaIdioma('EN')">English</a>
+                </div>
+            </div>
+
+            <div id="icone-menu">
+                <img id="menu-icon" src="img/menu-svgrepo-com.svg" style="width: 20px; height: auto;">
+            </div>
+        </div>
+
+            <!-- <div class="menu">
         <div class="menu-icon">
             <img src="img/menu-svgrepo-com.svg" alt="Menu Icon">
         </div>
@@ -60,17 +80,19 @@
             <a href="#">Cosmos</a>
             <a href="#" id="menuB2B">Seja um cliente <span id="span-b2b">B2B</span></a>
         </div>
-    </div>
-   </div>
+    </div> -->
+
+        
+        
 
 
-       
+
 
     </header>
 
     <main>
         <div class="imagem-header">
-            <h1>banner</h1> 
+            <h1>banner</h1>
         </div> <!--FIM DA DIV IMAGEM-HEADER-->
 
 
@@ -131,24 +153,28 @@
                 <span style="--i:13;"></span>
                 <span style="--i:26;"></span>
             </div>
-      
-        <div class="titulo-principal">
-            <h1 id="titulo-principal">a fusão dos geeks: piticas e bandup fazem
-                joint venture e criam a cosmos</h1>
-        </div> <!--FIM DA DIV TITULO-PRINCIPAL-->
 
-        <div class="primeiro-bloco">
+            <div class="titulo-principal">
+                <h1 class="efeito-fadeIn" id="titulo-principal">a fusão dos geeks: piticas e bandup fazem
+                    joint venture e criam a cosmos</h1>
+            </div> <!--FIM DA DIV TITULO-PRINCIPAL-->
 
-            <section class="imagem-lateral">
-                <img src="img/side-img.png" alt="">
-            </section><!--FIM DA SECTION IMAGEM-LATERAL-->
+            <div class="primeiro-bloco">
 
-            <section class="texto-lateral">
-                <h1>QUEM SOMOS?</h1>
-                <p>Cosmos é a fusão entre duas gigantes do mercado: BandUP! e Piticas. Juntas, essas empresas líderes no ramo da música e moda casual expandiram sua oferta de produtos e serviços, tornando-se uma referência internacional. Com uma ampla gama de produtos licenciados e uma presença marcante em eventos, o Grupo Cosmos é reconhecido por sua excelência, inovação e amor pela cultura pop e geek.</p>
-            </section><!--FIM DA SECTION TEXTO-LATERAL-->
-        </div><!--FIM DA DIV PRIMEIRO-BLOCO-->
-    </div>
+                <section class="imagem-lateral">
+                    <img src="img/side-img.png" alt="" class="efeito-fadeIn">
+                </section><!--FIM DA SECTION IMAGEM-LATERAL-->
+
+                <section class="texto-lateral">
+                    <h1 class="efeito-fadeIn">QUEM SOMOS?</h1>
+                    <p class="efeito-fadeIn">Cosmos é a fusão entre duas gigantes do mercado: BandUP! e Piticas. Juntas,
+                        essas empresas líderes no ramo da música e moda casual expandiram sua oferta de produtos e
+                        serviços, tornando-se uma referência internacional. Com uma ampla gama de produtos licenciados e
+                        uma presença marcante em eventos, o Grupo Cosmos é reconhecido por sua excelência, inovação e
+                        amor pela cultura pop e geek.</p>
+                </section><!--FIM DA SECTION TEXTO-LATERAL-->
+            </div><!--FIM DA DIV PRIMEIRO-BLOCO-->
+        </div>
 
 
 
@@ -157,8 +183,9 @@
             <div class="parallax-img"></div><!--FIM DA DIV PARALLAX-IMG-->
 
             <div class="parallax-conteudo">
-                <h1>O QUE FAZEMOS?</h1>
-                <p>O Grupo Cosmos é o epicentro da cultura pop e do entretenimento, criando experiências excepcionais
+                <h1 class="efeito-fadeIn">O QUE FAZEMOS?</h1>
+                <p class="efeito-fadeIn">O Grupo Cosmos é o epicentro da cultura pop e do entretenimento, criando
+                    experiências excepcionais
                     para
                     os fãs em todo o mundo. Nós oferecemos uma vasta gama de produtos e serviços, desde roupas estilosas
                     até
@@ -229,12 +256,16 @@
                 <span style="--i:13;"></span>
                 <span style="--i:26;"></span>
             </div>
-        <div class="segundo-bloco">
-            <div class="segundoBloco-txt">
-                <h1>OBJETIVOS</h1>
-                <p>O Grupo Cosmos visa promover a sinergia entre as empresas Piticas e BandUP para expandir os negócios, diversificar a oferta de produtos, promover a inovação colaborativa e impulsionar o crescimento sustentável a longo prazo. Com uma abordagem estratégica e orientada para resultados, o grupo está comprometido em alcançar a excelência operacional e moldar o futuro do mercado.</p>
-            </div><!--FIM DA DIV SEGUNDOBLOCO-TXT-->
-        </div><!--FIM DA DIV SEGUNDO-BLOCO-->]
+            <div class="segundo-bloco">
+                <div class="segundoBloco-txt">
+                    <h1 class="efeito-fadeIn">OBJETIVOS</h1>
+                    <p class="efeito-fadeIn">O Grupo Cosmos visa promover a sinergia entre as empresas Piticas e BandUP
+                        para expandir os negócios, diversificar a oferta de produtos, promover a inovação colaborativa e
+                        impulsionar o crescimento sustentável a longo prazo. Com uma abordagem estratégica e orientada
+                        para resultados, o grupo está comprometido em alcançar a excelência operacional e moldar o
+                        futuro do mercado.</p>
+                </div><!--FIM DA DIV SEGUNDOBLOCO-TXT-->
+            </div><!--FIM DA DIV SEGUNDO-BLOCO-->]
         </div>
     </main>
 

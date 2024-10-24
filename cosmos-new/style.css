@@ -14,23 +14,96 @@ body {
     background-color: black;
 }
 
+header {
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 12%;
+    transition: all .50s ease;
+    background-color: black;
+}
+
+.menu-items ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu-items a {
+    color: white;
+    padding: 5px 0;
+    margin: 0 10px;
+    transition: all .50s ease;
+    text-decoration: none;
+}
+
+.menu-items a:hover {
+    color: rgb(173, 169, 169);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon {
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 1400px) {
+    header {
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    .menu-items a {
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 1090px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .menu-items {
+        position: absolute;
+        top: 100%;
+        right: 2%;
+        width: 270px;
+        height: 29vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+
+    .menu-items a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+
+    .menu-items a:hover {
+        color: rgb(173, 169, 169);
+        transform: translateY(5px);
+    }
+
+}
+
 main {
     width: 100%;
     height: auto;
     padding-bottom: 1rem;
     background-color: black;
     overflow: hidden;
-}
-
-header {
-    width: 100%;
-    height: 4rem;
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 .container {
@@ -76,42 +149,20 @@ header {
     }
 }
 
+.efeito-fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+
+.efeito-fadeIn--visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 #logo {
-    width: 12rem;
+    width: 8rem;
     cursor: pointer;
-}
-
-.menu {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    margin-left: 2rem;
-}
-
-.menu-icon {
-    height: 100%;
-    cursor: pointer;
-}
-
-.agrupa-menu {
-    width: auto;
-    height: auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.dropdown-menu a {
-    color: white;
-    padding: 5px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-menu a:hover {
-    background-color: #555;
-    border-radius: 3px;
 }
 
 .troca-lang {
@@ -144,34 +195,6 @@ header {
     font-size: 16px;
 }
 
-.menu-icon img {
-    width: 25px;
-    height: auto;
-    cursor: pointer;
-}
-
-.menu-icon {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.menu {
-    height: 100%;
-    width: auto;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    margin-top: 1.3rem;
-    width: 12rem;
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-    border-top: solid white;
-}
-
 .dropdown-lang {
     display: none;
     position: absolute;
@@ -183,21 +206,17 @@ header {
     border-top: solid white;
 }
 
-.menu:hover .dropdown-menu,
+/* .menu:hover .dropdown-menu, */
 .troca-lang:hover .dropdown-lang {
     display: block;
 }
 
-.dropdown-menu a:hover,
+/* .dropdown-menu a:hover, */
 .dropdown-lang a:hover {
     background-color: #555;
     border-radius: 3px;
 }
 
-.dropdown-menu {
-    top: 40px;
-    right: 0;
-}
 
 .troca-lang img {
     height: auto;
