@@ -84,7 +84,29 @@ function visivel(elemento){
 
 let menu = document.querySelector('#menu-icon');
 let menuItems = document.querySelector('.menu-items');
+let trocaLang = document.querySelector('.troca-lang');
+let dropdownLang = document.querySelector('.dropdown-lang');
 
-menu.onclick = () => {
+menu.onclick = () => {  
+    if (dropdownLang.classList.contains('aberto')) {
+        dropdownLang.classList.remove('aberto');
+    }
     menuItems.classList.toggle('aberto');
-}
+};
+
+trocaLang.onclick = () => {
+    if (menuItems.classList.contains('aberto')) {
+        menuItems.classList.remove('aberto');
+    }
+    dropdownLang.classList.toggle('aberto');
+};
+
+document.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && !menuItems.contains(event.target)) {
+        menuItems.classList.remove('aberto');
+    }
+
+    if (!trocaLang.contains(event.target) && !dropdownLang.contains(event.target)) {
+        dropdownLang.classList.remove('aberto');
+    }
+});

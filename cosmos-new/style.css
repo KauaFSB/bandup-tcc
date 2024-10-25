@@ -66,6 +66,7 @@ header {
         padding: 5px 0;
     }
 }
+
 @media (max-width: 1090px) {
     #menu-icon {
         display: block;
@@ -95,9 +96,8 @@ header {
         margin: 0;
         width: 100%;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
     }
-
 
     .menu-items a {
         display: block;
@@ -115,7 +115,6 @@ header {
         right: 2%;
     }
 }
-
 
 main {
     width: 100%;
@@ -145,10 +144,10 @@ main {
 
 .estrelas span {
     position: relative;
-    width: .8vw; 
-    height: .8vw; 
+    width: .8vw;
+    height: .8vw;
     background: white;
-    margin: 0 1vw; 
+    margin: 0 1vw;
     border-radius: 50%;
     box-shadow: 0 0 0 10px white,
                 0 0 50px #fff,
@@ -192,52 +191,49 @@ main {
     cursor: pointer;
 }
 
-.troca-lang:hover .dropdown-lang {
-    display: block;
+.dropdown-lang {
+    position: absolute;
+    top: 170%;
+    right: -400%;
+    width: auto;
+    height: auto;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all .50s ease;
 }
 
 .dropdown-lang a {
     color: white;
-    padding: 5px;
     text-decoration: none;
     display: block;
+    padding: 5px 15px;
+    margin: 5px 5px;
+    transition: all .50s ease;
+    font-size: 1.5vw;
 }
 
 .dropdown-lang a:hover {
-    background-color: #555;
-    border-radius: 3px;
+    color: rgb(173, 169, 169);
+    transform: translateY(5px);
 }
 
-#selected-lang {
-    margin-left: 10px;
-    color: white;
-    font-size: 16px;
-}
-
-.dropdown-lang {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    margin-top: 8.8rem;
-    width: 7rem;
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
-    border-top: solid white;
-}
-
-.troca-lang:hover .dropdown-lang {
-    display: block;
-}
-
-.dropdown-lang a:hover {
-    background-color: #555;
-    border-radius: 3px;
+.dropdown-lang.aberto {
+    right: 2%;
 }
 
 .troca-lang img {
     height: auto;
     width: 30px;
     cursor: pointer;
+}
+
+#selected-lang {
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
 }
 
 #span-b2b {
@@ -394,10 +390,10 @@ p {
     .titulo-principal h1 {
         font-size: 2.6vw;
     }
-    
+
     .estrelas span {
-        width: 2vw; 
-        height: 2vw; 
+        width: 2vw;
+        height: 2vw;
     }
 }
 
@@ -411,8 +407,7 @@ p {
     }
 
     .estrelas span {
-        width: 3vw; 
+        width: 3vw;
         height: 3vw;
     }
-
 }
