@@ -8,23 +8,35 @@
     font-family: 'Noto Sans';
 }
 
-body {
+html, body {
+    width: 100%;
+    height: 100%;
     max-width: 2000px;
     margin: auto;
     background-color: black;
 }
 
 header {
-    position: fixed;
     width: 100%;
     top: 0;
     right: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 28px 12%;
     transition: all .50s ease;
+    background-color: black;
+}
+
+.menu{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    z-index: 3;
     background-color: black;
 }
 
@@ -144,18 +156,15 @@ main {
 
 .estrelas span {
     position: relative;
-    width: .8vw;
-    height: .8vw;
-    background: white;
+    width: 10px;
+    height: 10px;
     margin: 0 1vw;
-    border-radius: 50%;
-    box-shadow: 0 0 0 10px white,
-                0 0 50px #fff,
-                0 0 100px #fff;
+    border-radius: 100%;
     animation: animate 15s linear infinite;
     animation-duration: calc(400s / var(--i));
-    opacity: .3;
+    opacity: .5;
     z-index: 0;
+    background-color: white;
 }
 
 @keyframes animate {
@@ -163,7 +172,7 @@ main {
         transform: translateY(100vh) scale(0);
     }
     100% {
-        transform: translateY(-90vh) scale(1);
+        transform: translateY(-80vh) scale(1);
     }
 }
 
@@ -194,15 +203,15 @@ main {
 .dropdown-lang {
     position: absolute;
     top: 170%;
-    right: -400%;
+    right: -4000%;
     width: auto;
     height: auto;
     background-color: black;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: flex-start;
     border-radius: 10px;
-    transition: all .50s ease;
+    transition: right 0.3s ease;
 }
 
 .dropdown-lang a {
@@ -221,7 +230,8 @@ main {
 }
 
 .dropdown-lang.aberto {
-    right: 2%;
+    display: flex;
+    right: 0;
 }
 
 .troca-lang img {
@@ -241,12 +251,23 @@ main {
 }
 
 .imagem-header {
-    background-color: brown;
-    height: 95vh;
+    background-image: url('img/teste-banner.jpg');
+    background-size: cover;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: flutuar 2s infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
 }
 
 .titulo-principal {
@@ -392,8 +413,8 @@ p {
     }
 
     .estrelas span {
-        width: 2vw;
-        height: 2vw;
+        width: 5px;
+        height: 5px;
     }
 }
 
@@ -407,7 +428,7 @@ p {
     }
 
     .estrelas span {
-        width: 3vw;
-        height: 3vw;
+        width: 5px;
+        height: 5px;
     }
 }
