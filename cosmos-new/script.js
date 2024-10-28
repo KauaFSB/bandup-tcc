@@ -1,13 +1,4 @@
-function mudaIdioma(lang) {
-        const selectedLangElement = document.getElementById('selected-lang');
-        if (lang === 'PT-BR') {
-            selectedLangElement.innerText = 'PT-BR';
-        } else if (lang === 'EN') {
-            selectedLangElement.innerText = 'EN';
-        }
-    }
-
-// Conteúdos em diferentes idiomas
+    //CONTEÚDOS NOS IDIOMAS DIFERENTES
 const translations = {
     'PT-BR': {
         title: 'COSMOS',
@@ -23,7 +14,10 @@ const translations = {
         ancoraMarcas: 'Marcas',
         ancoraEventos: 'Eventos',
         ancoraHistoria: 'Nossa História',
-        ancoraB2B: 'Seja um cliente B2B'
+        ancoraB2B: 'Seja um cliente B2B',
+        aberturaTtl: 'BEM-VINDO,<br>COSMONAUTAS!',
+        aberturaSt: 'TODOS ABORDO E AVANTE!'
+
     },
     'EN': {
         title: 'COSMOS',
@@ -39,11 +33,13 @@ const translations = {
         ancoraMarcas: 'Our Brands',
         ancoraEventos: 'Events',
         ancoraHistoria: 'Our History',
-        ancoraB2B: 'Be a B2B Client'
+        ancoraB2B: 'Be a B2B Client',
+        aberturaTtl: 'WELLCOME,<br>COSMONAUTAS!',
+        aberturaSt: 'ALL ON BOARD AND ONWARD!'
     }
 };
 
-// Função para trocar o conteúdo baseado na linguagem
+//FUNÇÃO PARA TROCAR O CONTEÚDO
 function mudaIdioma(language) {
     // Atualiza o texto do idioma selecionado
     document.getElementById('selected-lang').textContent = language;
@@ -52,6 +48,8 @@ function mudaIdioma(language) {
     document.title = translations[language].title;
 
     // Atualiza o conteúdo principal
+    document.getElementById('titulo-abertura').innerHTML = translations[language].aberturaTtl;
+    document.getElementById('subtitulo-abertura').innerHTML = translations[language].aberturaSt;
     document.getElementById('menuTC').textContent = translations[language].ancoraTC;
     document.getElementById('menuLojas').textContent = translations[language].ancoraLojas;
     document.getElementById('menuMarcas').textContent = translations[language].ancoraMarcas;
@@ -109,4 +107,7 @@ document.addEventListener('click', (event) => {
     if (!trocaLang.contains(event.target) && !dropdownLang.contains(event.target)) {
         dropdownLang.classList.remove('aberto');
     }
-});
+}); 
+
+
+
