@@ -40,6 +40,8 @@ body {
   font-size: var(--step-0);
 }
 
+
+
 /* Layout de seções */
 section {
   min-height: 100vh;
@@ -99,7 +101,7 @@ p {
 
 .heading {
   position: absolute;
-  top: 100vh;
+  top: 80vh;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -133,6 +135,14 @@ h1 .eyebrow {
   z-index: -10;
 }
 
+#marcas {
+  margin-bottom: 2rem;
+}
+
+#marcasQue {
+  margin-bottom: 10rem;
+}
+
 /* Textos */
 .intro,
 h2,
@@ -143,6 +153,7 @@ h3 {
 
 .text-container {
   position: relative;
+  z-index: -1;
 }
 
 .text-container p {
@@ -213,7 +224,7 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   align-items: center;
-  /* justify-items: center; */
+  justify-items: center;
 }
 
 .parallax-images .image_cont {
@@ -350,3 +361,26 @@ h3 {
 .spacer {
   height: 10vh;
 }
+
+@media (max-width: 1350px) {
+  .heading {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column; /* Coloca cada elemento em uma nova linha */
+    justify-content: center;
+    height: 100vh; /* Define a altura para ocupar a tela inteira */
+  }
+
+  .heading p {
+    font-size: 15vw;
+    margin: 0; /* Remove qualquer margem para evitar espaçamento extra */
+    line-height: 1; /* Ajusta o espaçamento vertical */
+  }
+}
+
+
+
