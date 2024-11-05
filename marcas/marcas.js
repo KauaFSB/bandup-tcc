@@ -17,22 +17,18 @@ anteriorBtn.addEventListener('click', () => {
   containerWrapper.style.transform = `translateX(-${containerAtual * 100}%)`;
 });
 
+
 const banner = document.querySelector('.banner');
 
 window.addEventListener('scroll', () => {
   const posicaoScroll = window.scrollY;
-
   const minScale = 0.5;
   const maxScale = 1;
-  const maxBorderRadius = 100; // Alterado para um arredondamento máximo de 100px
-
-  // Calcula o valor da escala
+  const maxBorderRadius = 100;
   const valorEscala = Math.max(minScale, maxScale - posicaoScroll / 3000);
-
-  // Calcula o valor do border-radius, variando até o novo limite de 100px
   const valorBorderRadius = Math.min(maxBorderRadius, (posicaoScroll / 60));
 
-  // Aplica os estilos transform e border-radius
   banner.style.transform = `scale(${valorEscala})`;
   banner.style.borderRadius = `${valorBorderRadius}px`;
 });
+

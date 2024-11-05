@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: "Poppins" sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html, body {
@@ -43,36 +41,20 @@ main {
 }
 
 section {
+  position: relative;
   width: 408px;
-  height: 80vh;
-  max-height: 740px;
+  height: 740px;
   max-width: 1200px;
   background-color: aliceblue;
-  border-radius: 50px;
-  margin: 10px;
-  transition: all .8s ease;
+  border-radius: 30px;
+  margin: 0.5%;
   overflow: hidden;
+  transition: transform 0.8s ease;
 }
 
-.menu-overlay {
-  position: absolute;
-  left: -100%;           
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); 
-  transition: all .8s ease;
+section:hover {
+  transform: scale(1.05); 
 }
-
-section:hover .menu-overlay {
-  left: 0;  
-}
-
-section {
-  position: relative;
-  overflow: hidden;
-}
-
 
 section img {
   width: 100%;
@@ -80,18 +62,36 @@ section img {
   object-fit: cover;
 }
 
-section:hover img {
+.mais-info {
+  position: absolute;
+  bottom: 0; 
   width: 100%;
-  height: 100%;
-  transition: all .8s ease;
-  object-fit: cover;
+  height: 100px; 
+  display: flex;
+  align-items: center;    
+  justify-content: end;
+  padding: 0 1.5rem;
 }
 
-
-section:hover {
-  width: 100%;
+.maisInfo-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgb(48, 47, 47);
+  cursor: pointer;
   transition: all .8s ease;
-  height: 83vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.maisInfo-btn img {
+  width: 50%;
+  height: auto;
+}
+
+.maisInfo-btn:hover {
+  background-color: rgb(63, 62, 62);
 }
 
 .btn-group {
@@ -114,12 +114,12 @@ section:hover {
 
 #proximo-btn:hover {
   background-color: rgb(240, 240, 240);
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 #anterior-btn:hover {
   background-color: rgb(240, 240, 240);
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 #anterior-btn {
@@ -137,13 +137,13 @@ section:hover {
   width: 100%;
   height: auto;
   transform: rotate(180deg);
-  opacity: .65;
+  opacity: 0.65;
 }
 
 #proximo-btn img {
   width: 100%;
   height: auto;
-  opacity: .65;
+  opacity: 0.65;
 }
 
 .agrupa-container {
@@ -155,20 +155,10 @@ section:hover {
 .cards-container {
   display: flex;
   justify-content: space-between;
-  min-width: 100%;
-}
-
-#cards-container2 {
-  display: flex;
 }
 
 .cards-container-wrapper {
   display: flex;
   width: 200%;
-  transition: transform .8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
-
-#cards-container3 {
-  display: flex;
-}
-
