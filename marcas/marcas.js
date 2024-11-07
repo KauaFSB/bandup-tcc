@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
 const proximoBtn = document.getElementById('proximo-btn');
 const anteriorBtn = document.getElementById('anterior-btn');
 const containerWrapper = document.querySelector('.cards-container-wrapper');
-const totalContainers = containerWrapper.children.length; 
+const totalContainers = containerWrapper.children.length - 2; 
 let containerAtual = 0; 
 
 function calculaLarguraTotalDoCard() {
@@ -25,12 +25,7 @@ function calculaLarguraTotalDoCard() {
     const cardMarginRight = parseFloat(cardStyle.margin); 
     console.log(card);
 
-    if (containerAtual === totalContainers - 2) {
-        return cardWidth - cardMarginRight * 2;
-    } 
-    else {
-        return cardWidth + cardMarginRight * 2;
-    }
+         return cardWidth + cardMarginRight * 2;
 }
 
 
