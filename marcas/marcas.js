@@ -6,7 +6,7 @@ window.addEventListener('scroll', () => {
     const maxScale = 1;
     const maxBorderRadius = 100;
     const valorEscala = Math.max(minScale, maxScale - posicaoScroll / 3000);
-    const valorBorderRadius = Math.min(maxBorderRadius, (posicaoScroll / 60));
+    const valorBorderRadius = Math.min(maxBorderRadius, posicaoScroll / 60);
 
     banner.style.transform = `scale(${valorEscala})`;
     banner.style.borderRadius = `${valorBorderRadius}px`;
@@ -15,74 +15,49 @@ window.addEventListener('scroll', () => {
 const proximoBtn = document.getElementById('proximo-btn');
 const anteriorBtn = document.getElementById('anterior-btn');
 const containerWrapper = document.querySelector('.cards-container-wrapper');
-const totalContainers = containerWrapper.children.length - 2; 
-let containerAtual = 0; 
-
-function calculaLarguraTotalDoCard() {
-    const card = containerWrapper.children[0]; 
-    const cardStyle = window.getComputedStyle(card);
-    const cardWidth = card.offsetWidth; 
-    const cardMarginRight = parseFloat(cardStyle.margin); 
-    console.log(card);
-
-         return cardWidth + cardMarginRight * 2;
-}
-
-
-function atualizarBotoes() {
-  if (containerAtual === 0) {
-      anteriorBtn.disabled = true;
-      anteriorBtn.style.opacity=.5;
-  } else {
-      anteriorBtn.disabled = false;
-      anteriorBtn.style.opacity=1;
-  }
-
-  if (containerAtual === totalContainers - 1) {
-      proximoBtn.disabled = true;
-      proximoBtn.style.opacity=.5;
-  } else {
-      proximoBtn.disabled = false;
-      proximoBtn.style.opacity=1;
-  }
-}
-
-
-proximoBtn.addEventListener('click', () => {
-    const larguraTotalDoCard = calculaLarguraTotalDoCard();
-
-    if (containerAtual < totalContainers - 1) {
-        containerAtual += 1;
-    } else {
-        containerAtual = 0;
-    }
-
-    containerWrapper.style.transform = `translateX(-${containerAtual * larguraTotalDoCard}px)`;
-    atualizarBotoes();
-});
-
-anteriorBtn.addEventListener('click', () => {
-    const larguraTotalDoCard = calculaLarguraTotalDoCard();
-
-    if (containerAtual > 0) {
-        containerAtual -= 1;
-    } else {
-        containerAtual = totalContainers - 1; 
-    }
-
-    containerWrapper.style.transform = `translateX(-${containerAtual * larguraTotalDoCard}px)`;
-    atualizarBotoes();
-});
-
-atualizarBotoes();
-
 const modal = document.getElementById('modal');
 const modalBackdrop = document.getElementById('modal-backdrop');
 const modalText = document.getElementById('modal-text');
 const closeBtn = document.querySelector('.modal .close');
+let containerAtual = 0;
+
+function calculaLarguraTotalDoCard() {
+    const card = containerWrapper.children[0];
+    const cardStyle = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const cardMarginRight = parseFloat(cardStyle.margin);
+    return cardWidth + cardMarginRight * 2;
+}
+
+function atualizarBotoes() {
+    anteriorBtn.disabled = containerAtual === 0;
+    proximoBtn.disabled = containerAtual === totalContainers() - 1;
+    anteriorBtn.style.opacity = anteriorBtn.disabled ? 0.5 : 1;
+    proximoBtn.style.opacity = proximoBtn.disabled ? 0.5 : 1;
+}
+
+function totalContainers() {
+    if (window.innerWidth >= 2000) return containerWrapper.children.length - 3;
+    if (window.innerWidth <= 525) return containerWrapper.children.length;
+    if (window.innerWidth <= 1160) return containerWrapper.children.length - 1;
+    if (window.innerWidth < 2000 && window.innerWidth >= 1665) return  containerWrapper.children.length -3;
+    return containerWrapper.children.length - 2;
+}
+
+function moverContainer(direcao) {
+    const larguraTotalDoCard = calculaLarguraTotalDoCard();
+    containerAtual += direcao;
+    containerAtual = (containerAtual + totalContainers()) % totalContainers();
+    containerWrapper.style.transform = `translateX(-${containerAtual * larguraTotalDoCard}px)`;
+    atualizarBotoes();
+}
+
+proximoBtn.addEventListener('click', () => moverContainer(1));
+anteriorBtn.addEventListener('click', () => moverContainer(-1));
+atualizarBotoes();
 
 function openModal(content) {
-    modalText.textContent = content; 
+    modalText.textContent = content;
     modal.classList.add('active');
     modalBackdrop.classList.add('active');
     document.body.classList.add('modal-active');
@@ -103,4 +78,3 @@ document.querySelectorAll('.maisInfo-btn').forEach((btn, index) => {
 
 closeBtn.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', closeModal);
-

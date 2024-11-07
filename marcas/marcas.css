@@ -34,6 +34,13 @@ main {
   transition: transform 0.1s ease-out;
 }
 
+#titulo {
+  padding: 2rem 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
 .cards-container {
   display: flex;
   justify-content: space-between;
@@ -201,6 +208,8 @@ section img {
 .modal-content {
   position: relative;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .close {
@@ -227,6 +236,14 @@ body.modal-active {
   section {
     width: 344px; 
     height: 628px; 
+    transition: all .5s ease;
+  }
+}
+
+@media (max-width: 768px) {
+  #titulo, #titulo h1 {
+    justify-content: center;
+    font-size: 5vw;
     transition: all .5s ease;
   }
 }
