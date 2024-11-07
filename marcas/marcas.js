@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
 const proximoBtn = document.getElementById('proximo-btn');
 const anteriorBtn = document.getElementById('anterior-btn');
 const containerWrapper = document.querySelector('.cards-container-wrapper');
-const totalContainers = containerWrapper.children.length - 2; 
+const totalContainers = containerWrapper.children.length; 
 let containerAtual = 0; 
 
 function calculaLarguraTotalDoCard() {
@@ -23,9 +23,16 @@ function calculaLarguraTotalDoCard() {
     const cardStyle = window.getComputedStyle(card);
     const cardWidth = card.offsetWidth; 
     const cardMarginRight = parseFloat(cardStyle.margin); 
+    console.log(card);
 
-    return cardWidth + cardMarginRight * 2; 
+    if (containerAtual === totalContainers - 2) {
+        return cardWidth - cardMarginRight * 2;
+    } 
+    else {
+        return cardWidth + cardMarginRight * 2;
+    }
 }
+
 
 function atualizarBotoes() {
   if (containerAtual === 0) {
@@ -44,6 +51,7 @@ function atualizarBotoes() {
       proximoBtn.style.opacity=1;
   }
 }
+
 
 proximoBtn.addEventListener('click', () => {
     const larguraTotalDoCard = calculaLarguraTotalDoCard();
