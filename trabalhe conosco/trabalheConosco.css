@@ -33,6 +33,19 @@ body {
     max-height: 90vh;
 }
 
+.container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #9b9999;
+    border-radius: 5px;
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
 .form {
     max-width: 2000px;
     height: auto;
@@ -245,6 +258,31 @@ textarea {
     font-size: 0.9rem;
     color: #666;
     text-align: center;
+}
+
+.dropdown-container {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: block;
+    position: relative;
+    background-color: #f1f1f1;
+    width: 100%;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    max-height: 0; 
+    opacity: 0;
+    transition: max-height 0.8s ease, opacity 0.8s ease;
+}
+
+.dropdown-content.show {
+    max-height: 200px;
+    opacity: 1;
 }
 
 

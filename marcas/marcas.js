@@ -20,6 +20,8 @@ const modalBackdrop = document.getElementById('modal-backdrop');
 const modalText = document.getElementById('modal-text');
 const closeBtn = document.querySelector('.modal .close');
 let containerAtual = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
 function calculaLarguraTotalDoCard() {
     const card = containerWrapper.children[0];
@@ -40,7 +42,7 @@ function totalContainers() {
     if (window.innerWidth >= 2000) return containerWrapper.children.length - 3;
     if (window.innerWidth <= 525) return containerWrapper.children.length;
     if (window.innerWidth <= 1160) return containerWrapper.children.length - 1;
-    if (window.innerWidth < 2000 && window.innerWidth >= 1665) return  containerWrapper.children.length -3;
+    if (window.innerWidth < 2000 && window.innerWidth >= 1665) return containerWrapper.children.length - 3;
     return containerWrapper.children.length - 2;
 }
 
@@ -87,9 +89,27 @@ document.addEventListener("scroll", function() {
             paragrafo.classList.add("efeito-fadeIn--visible")
         }
     })
-})
+});
 
-function visivel(elemento){
+function visivel(elemento) {
     const rect = elemento.getBoundingClientRect();
     return (rect.bottom > 0 && rect.top < (window.innerHeight - 150 || document.documentElement.clientHeight - 150));
 }
+
+containerWrapper.addEventListener('touchstart', (event) => {
+    touchStartX = event.touches[0].clientX;
+});
+
+containerWrapper.addEventListener('touchmove', (event) => {
+    touchEndX = event.touches[0].clientX;
+});
+
+containerWrapper.addEventListener('touchend', () => {
+    const touchDiff = touchStartX - touchEndX;
+
+    if (touchDiff > 50) {
+        moverContainer(1);
+    } else if (touchDiff < -50) {
+        moverContainer(-1);
+    }
+});
