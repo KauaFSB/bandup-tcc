@@ -31,8 +31,16 @@ main {
     background-color: antiquewhite;
 }
 
+/* .efeito-fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
 
-
+.efeito-fadeIn--visible {
+    transform: translateY(0);
+    opacity: 1;
+} */
 
 
 /* ESTILO DA SEÇÃO APRESENTACAO */

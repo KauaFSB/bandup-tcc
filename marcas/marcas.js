@@ -57,7 +57,7 @@ anteriorBtn.addEventListener('click', () => moverContainer(-1));
 atualizarBotoes();
 
 function openModal(content) {
-    modalText.textContent = content;
+    modalText.innerHTML = content;
     modal.classList.add('active');
     modalBackdrop.classList.add('active');
     document.body.classList.add('modal-active');
@@ -78,3 +78,18 @@ document.querySelectorAll('.maisInfo-btn').forEach((btn, index) => {
 
 closeBtn.addEventListener('click', closeModal);
 modalBackdrop.addEventListener('click', closeModal);
+
+const paragrafos = document.querySelectorAll(".efeito-fadeIn");
+
+document.addEventListener("scroll", function() {
+    paragrafos.forEach(paragrafo => {
+        if (visivel(paragrafo)) {
+            paragrafo.classList.add("efeito-fadeIn--visible")
+        }
+    })
+})
+
+function visivel(elemento){
+    const rect = elemento.getBoundingClientRect();
+    return (rect.bottom > 0 && rect.top < (window.innerHeight - 150 || document.documentElement.clientHeight - 150));
+}
