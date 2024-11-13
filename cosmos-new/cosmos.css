@@ -403,13 +403,13 @@ main {
     z-index: 1;
 }
 
-h1 {
+main h1 {
     padding-bottom: 1rem;
     color: white;
     font-size: 20pt;
 }
 
-p {
+main p {
     font-size: 15pt;
     color: white;
 }
@@ -419,11 +419,11 @@ p {
 }
 
 @media (max-width: 991.5px) {
-    p {
+    main p {
         font-size: 2vw;
     }
 
-    h1 {
+    main h1 {
         font-size: 3vw;
     }
 
