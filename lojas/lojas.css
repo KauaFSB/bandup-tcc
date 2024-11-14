@@ -62,15 +62,16 @@ html, body {
     display: flex;
     flex-direction: column;
     height: 80%;
+    width: 50%;
     justify-content: space-around;
+    align-items: start;
 }
 
 .logo-loja {
-    width: 400px;
-    height: 400px;
+    width: 30vw;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .logo-loja img{
@@ -79,18 +80,19 @@ html, body {
 
 .descricao-loja {
     width: 400px;
-    height: 200px;
+    height: auto;
 }
 
 .lojas-button {
     width: auto;
-    height: 5rem;
     border-radius: 50px;
     border: 0;
     cursor: pointer;
     background-color: #1b1b1b;
     color: white;
     transition: all .8s ease;
+    padding: 3% 6%;
+    font-size: 1vw;
 }
 
 .lojas-button:hover {
@@ -107,9 +109,20 @@ html, body {
     justify-content: center;
 }
 
-.img-loja img{
+.img-loja img {
+    width: 100%;
     height: 100%;
+    object-fit: contain; /* Mantém a proporção sem distorcer ou cortar */
 }
+
+.lojaFresno .img-loja img, 
+.lojaHarry .img-loja img {
+    width: auto; /* Ajusta a largura conforme a proporção */
+    height: 100vh; /* Garante que a imagem ocupe sempre a altura total da tela */
+    object-fit: cover; /* Ocupa a altura da tela, mantendo a imagem responsiva */
+}
+
+
 
 #poster-warner { height: 90%; animation: warner 5s ease-in-out infinite;}
 @keyframes warner {
@@ -203,10 +216,10 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Coloca os quadrados atrás do título */
+    z-index: 0; 
 }
 
-.logo {
+.logo { 
     width: 50px;
     height: 50px;
     background-color: gray;
@@ -234,7 +247,6 @@ html, body {
     }
 }
 
-/* Animação com movimento sem padrão */
 @keyframes moverAleatorio {
     0% { transform: translate(0, 0); }
     10% { transform: translate(15px, -10px); }
@@ -254,24 +266,32 @@ html, body {
 }
 
 
-/* Alternar a ordem para cada loja */
 .lojaWarner, .lojaHbo .descricao-lateral { order: 1; text-align: start;}
 .lojaWarner,.lojaHbo .img-loja { order: 2; }
 
-.lojaDc .descricao-lateral { order: 2; text-align: end;}
+.lojaDc .descricao-lateral { order: 2; text-align: end; }
 .lojaDc .img-loja { order: 1; }
 
  .descricao-lateral { order: 1; text-align: start;}
  .img-loja { order: 2; }
 
-.lojaHarry .descricao-lateral { order: 2; text-align: end;}
+.lojaHarry .descricao-lateral { order: 2; text-align: end; display: flex; align-items: end;}
 .lojaHarry .img-loja { order: 1; }
 
-.lojaMonica .descricao-lateral { order: 1; text-align: start;}
+.lojaMonica .descricao-lateral { order: 1; text-align: start; }
 .lojaMonica .img-loja { order: 2; }
 
-.lojaFresno .descricao-lateral { order: 2; text-align: end;}
+.lojaFresno .descricao-lateral { order: 2; text-align: end; display: flex; align-items: end;}
 .lojaFresno .img-loja { order: 1; }
 
 .lojaCartoon .descricao-lateral { order: 1; text-align: start;}
 .lojaCartoon .img-loja { order: 2; }
+
+#lojas-main h1 {
+    font-size: 2vw;
+}
+
+/* Responsividade para evitar a barra de rolagem horizontal */
+@media (max-width: 1180px) {
+    /* TROCAR IMAGEM DA FRESNO */
+}
