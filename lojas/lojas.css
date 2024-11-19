@@ -67,6 +67,10 @@ html, body {
     align-items: start;
 }
 
+.responsivo {
+    display: none;
+}
+
 .logo-loja {
     width: 30vw;
     height: auto;
@@ -294,4 +298,34 @@ html, body {
 /* Responsividade para evitar a barra de rolagem horizontal */
 @media (max-width: 1180px) {
     /* TROCAR IMAGEM DA FRESNO */
+}
+
+
+@media (max-width: 768px) {
+    .faixa {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .descricao-lateral {
+        width: 90%;
+        height: 20%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .lojas-button {
+        display: none;
+    }
+
+    .img-loja {
+        width: auto;
+        height: 50%;
+    }
+
+    .responsivo {
+        display: flex;
+    }
 }
