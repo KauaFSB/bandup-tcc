@@ -34,7 +34,8 @@ typeEffect();
 document.addEventListener("DOMContentLoaded", () => {
     const logos = document.querySelectorAll('.logo');
     logos.forEach((logo, index) => {
-        // Adiciona um pequeno atraso para cada logo surgir em sequência
         logo.style.animationDelay = `${index * 0.2}s`;
     });
 });
+
+
