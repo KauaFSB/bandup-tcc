@@ -19,3 +19,21 @@ function selectOption(option) {
     document.querySelector('.dropdown-content').classList.remove('show');
     document.body.classList.remove('no-scroll');
 }
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const jumpSequenceElement = document.querySelector(".jump-sequence");
+    if (jumpSequenceElement) {
+        const text = jumpSequenceElement.textContent;
+        jumpSequenceElement.textContent = ""; 
+
+        text.split("").forEach((char, index) => {
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.style.setProperty("--i", index); 
+            jumpSequenceElement.appendChild(span);
+        });
+    }
+});
