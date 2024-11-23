@@ -37,3 +37,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / scrollHeight) * 100;
+    document.getElementById('progressBar').style.width = progress + '%';
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const introText = document.querySelector(".intro-trabalheConosco h1");
+    const text = introText.textContent;
+    introText.textContent = "";
+    let i = 0;
+
+    const typeEffect = () => {
+        if (i < text.length) {
+            introText.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeEffect, 100);
+        }
+    };
+
+    typeEffect();
+});
+
